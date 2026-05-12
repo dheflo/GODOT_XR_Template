@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bfcbey4t5t6p1" path="res://main.gd" id="1_ig7tw"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_ig7tw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0xm2m"]
+
 [sub_resource type="Environment" id="Environment_ig7tw"]
 
 [node name="Main" type="Node3D" unique_id=1930156470]
@@ -17,6 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftHand" unique_id=1634904983]
+mesh = SubResource("SphereMesh_ig7tw")
 
 [node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=1377032062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -24,6 +29,7 @@ tracker = &"right_hand"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightHand" unique_id=1435969201]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("SphereMesh_0xm2m")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1149936493]
 
